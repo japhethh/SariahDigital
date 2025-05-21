@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
-              <img src="/logoImages.png" alt="SARIA" width={120} height={60} className="h-auto" />
+              <Image src="/logoImages.png" alt="SARIA" width={120} height={60} className="h-auto" />
             </Link>
           </div>
 

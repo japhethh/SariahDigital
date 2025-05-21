@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
+
 
 const Offers = () => {
   return (
@@ -14,7 +16,7 @@ const Offers = () => {
             {/* First Row - Webinars */}
             <tr className="border-b border-gray-200">
               <td className="py-8 pr-8 w-1/2">
-                <img
+                <Image
                   src="/1image.png"
                   className="w-full rounded-lg shadow-sm"
                   alt="Conference room with presentation screen"
@@ -51,14 +53,14 @@ const Offers = () => {
                 </div>
               </td>
               <td className="py-8 pl-8 w-1/2">
-                <img src="/1image.png" className="w-full rounded-lg shadow-sm" alt="eBook mockups" />
+                <Image src="/1image.png" className="w-full rounded-lg shadow-sm" alt="eBook mockups" />
               </td>
             </tr>
 
             {/* Third Row - Reselling */}
             <tr>
               <td className="py-8 pr-8 w-1/2">
-                <img
+                <Image
                   src="/1image.png"
                   className="w-full rounded-lg shadow-sm"
                   alt="Conference room with presentation screen"
@@ -86,7 +88,7 @@ const Offers = () => {
       <div className="md:hidden space-y-12">
         {/* First Card - Webinars */}
         <div className="space-y-4">
-          <img
+          <Image
             src="/1image.png"
             className="w-full rounded-lg shadow-sm"
             alt="Conference room with presentation screen"
@@ -105,7 +107,7 @@ const Offers = () => {
 
         {/* Second Card - eBook Bundles */}
         <div className="space-y-4">
-          <img src="/1image.png" className="w-full rounded-lg shadow-sm" alt="eBook mockups" />
+          <Image src="/1image.png" className="w-full rounded-lg shadow-sm" alt="eBook mockups" />
           <div>
             <div className="flex flex-col gap-2 font-bold text-3xl text-[#243B2D]">
               <h1>2 Bundles for</h1>
@@ -120,7 +122,7 @@ const Offers = () => {
 
         {/* Third Card - Reselling */}
         <div className="space-y-4">
-          <img
+          <Image
             src="/1image.png"
             className="w-full rounded-lg shadow-sm"
             alt="Conference room with presentation screen"

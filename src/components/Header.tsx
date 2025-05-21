@@ -1,5 +1,5 @@
 import { X } from "lucide-react"
-
+import Image from "next/image"
 const Header = () => {
 
   const nav = [
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex container mx-auto items-center justify-between py-6">
             <div>
-              <img src="/logoImages.png" alt="Logo" />
+              <Image src="/logoImages.png" alt="Logo" />
             </div>
             <div>
               <ul className="flex flex-row md:gap-[75px] max-md:hidden ">

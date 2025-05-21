@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function HeroWithHeader() {
   return (
     <div className="max-h-screen bg-gradient-to-b from-white to-gray-100 overflow-hidden">
@@ -34,7 +36,7 @@ export default function HeroWithHeader() {
           {/* Hero Image */}
           <div className="transform -translate-y-0 sm:-translate-y-5 md:-translate-y-10 container mx-auto mt-6 sm:mt-0">
             <div className="flex justify-center">
-              <img
+              <Image
                 src="/imageAllpng.png"
                 className="w-full max-w-[1496px] object-contain"
                 alt="Collection of digital products and coaching materials"
