@@ -35,7 +35,7 @@ const FAQ = () => {
               </span>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 pt-1 text-gray-600">
-              No, you don't need advanced technical skills. Our resources are designed to be user-friendly with clear
+              No, you do not need advanced technical skills. Our resources are designed to be user-friendly with clear
               instructions that anyone can follow, regardless of technical background.
             </AccordionContent>
           </AccordionItem>
@@ -72,7 +72,7 @@ const FAQ = () => {
               </span>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 pt-1 text-gray-600">
-              You'll receive comprehensive support including access to our private community, regular Q&A sessions,
+              You all receive comprehensive support including access to our private community, regular Q&A sessions,
               email support, and 1:1 coaching calls to help you implement the strategies and maximize your results.
             </AccordionContent>
           </AccordionItem>
@@ -84,7 +84,7 @@ const FAQ = () => {
               </span>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 pt-1 text-gray-600">
-              Yes, you'll get instant access to all materials immediately after your purchase is complete. Everything is
+              Yes, you all get instant access to all materials immediately after your purchase is complete. Everything is
               delivered digitally, so you can start using the resources right away.
             </AccordionContent>
           </AccordionItem>
