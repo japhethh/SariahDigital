@@ -1,15 +1,17 @@
 import { X } from "lucide-react"
 import Image from "next/image"
+import Link from 'next/link'
 const Header = () => {
+
 
   const nav = [
     {
       name: "Home",
-      path: "#"
+      path: "/"
     },
     {
       name: "About Me",
-      path: "#"
+      path: "/about-us"
     },
     {
       name: "Contact Me",
@@ -19,16 +21,22 @@ const Header = () => {
   return (
     <div>
       <header className="sticky top-0 z-50 bg-white shadow-xs">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full  mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex container mx-auto items-center justify-between py-6">
-            <div>
-              <Image src="/logoImages.png" alt="Logo" />
+            <div className="w-[150px] h-auto">
+              <Image
+                src="/logoImages.png"
+                width={800}
+                height={800}
+                alt="Logo"
+                className="w-full h-auto"
+              />
             </div>
             <div>
               <ul className="flex flex-row md:gap-[75px] max-md:hidden ">
                 {
-                  nav.map((item, index) => (
-                    <li key={index} className="cursor-pointer">{item.name}</li>
+                  nav.map((item) => (
+                    <Link href={item.path} key={item.name} className="cursor-pointer">{item.name}</Link>
                   ))
                 }
 

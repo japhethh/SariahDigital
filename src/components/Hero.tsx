@@ -36,8 +36,10 @@ export default function HeroWithHeader() {
           {/* Hero Image */}
           <div className="transform -translate-y-0 sm:-translate-y-5 md:-translate-y-10 container mx-auto mt-6 sm:mt-0">
             <div className="flex justify-center">
+
               <Image
                 src="/imageAllpng.png"
+                width={200} height={0}
                 className="w-full max-w-[1496px] object-contain"
                 alt="Collection of digital products and coaching materials"
               />

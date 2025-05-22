@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Manrope } from 'next/font/google'
+import Header from "@/components/Header";
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -23,6 +24,8 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${manrope.variable} antialiased`}
       >
+
+        <Header />
         {children}
       </body>
     </html>
