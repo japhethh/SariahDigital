@@ -1,91 +1,132 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+"use client"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Check } from "lucide-react"
 
-const bundles = [
-  {
-    title: "First Bundle",
-    price: "₱2,000.00",
-    subtitle: "For: Beginners on a budget",
-    description: "Get started with essential tools and resources without breaking the bank.",
-    color: "bg-cyan-500",
-    inclusions: [
-      "Full course for eBook creation",
-      "Editable Canva templates (personal + business use)",
-      "Access to my recorded and upcoming webinars",
-      "Official community group access",
-    ],
-  },
-  {
-    title: "Second Bundle",
-    price: "₱4,000.00",
-    subtitle: "For: Action-takers who want fast results",
-    description: "Designed to help you achieve quick and effective success.",
-    color: "bg-violet-600",
-    inclusions: [
-      "Everything in the first bundle",
-      "Full course on Sales Psychology",
-      "Personalized feedback & selling strategies",
-      "Additional Canva templates",
-      "DFY funnel/landing page",
-      "1:1 coaching call (2 sessions, 30–60 mins each)",
-    ],
-  },
-  {
-    title: "Third Bundle",
-    price: "₱2,000.00",
-    subtitle: "For: Beginners on a budget",
-    description: "Get started with essential tools and resources without breaking the bank.",
-    color: "bg-cyan-500",
-    inclusions: [
-      "Full course for eBook creation",
-      "Editable Canva templates (personal + business use)",
-      "Access to my recorded and upcoming webinars",
-      "Official community group access",
-    ],
-  },
-];
+export default function Component() {
+  const bundles = [
+    {
+      id: 1,
+      name: "First Bundle",
+      price: "₱2,000.00",
+      bgColor: "bg-teal-500",
+      textColor: "text-teal-500",
+      buttonColor: "bg-teal-500 hover:bg-teal-600",
+      target: "For: Beginners on a budget",
+      description: "Get started with essential tools and help create without breaking the bank.",
+      inclusions: [
+        "Full course for eBook creation",
+        "Editable Canva templates (personal + business use)",
+        "Access to my recorded and upcoming webinars",
+        "Official community group access",
+      ],
+    },
+    {
+      id: 2,
+      name: "Second Bundle",
+      price: "₱4,000.00",
+      bgColor: "bg-purple-600",
+      textColor: "text-purple-600",
+      buttonColor: "bg-purple-600 hover:bg-purple-700",
+      target: "For: Action-takers who want fast results",
+      description: "Designed to help you achieve quick and effective success.",
+      inclusions: [
+        "Everything in the first bundle",
+        "Full course on Sales Psychology",
+        "Personalized feedback & scaling strategies",
+        "Additional Canva templates",
+        "DFY funnel/landing page",
+        "1:1 coaching call (2 sessions, 30-60 mins each)",
+      ],
+    },
+    {
+      id: 3,
+      name: "Third Bundle",
+      price: "₱2,000.00",
+      bgColor: "bg-teal-500",
+      textColor: "text-teal-500",
+      buttonColor: "bg-teal-500 hover:bg-teal-600",
+      target: "For: Beginners on a budget",
+      description: "Get started with essential tools and help create without breaking the bank.",
+      inclusions: [
+        "Full course for eBook creation",
+        "Editable Canva templates (personal + business use)",
+        "Access to my recorded and upcoming webinars",
+        "Official community group access",
+      ],
+    },
+  ]
 
-export default function EbookBundles() {
   return (
-    <section className="min-h-screen bg-gray-50 py-12 px-4 md:px-12">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-xl font-medium text-gray-500">
-          Choose Your Path to eBook Success
-        </h2>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mt-2 mb-4">
-          Direct & Benefit-Focused
-        </h1>
-        <p className="text-lg text-gray-600 mb-10">
-          Whether you’re starting on a budget or ready to scale fast — we’ve got the perfect bundle for your journey.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="min-h-screen py-12 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-12 px-4">
+          <p className="text-gray-600 text-base sm:text-lg mb-4">Choose Your Path to eBook Success</p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Direct & Benefit-Focused
+          </h1>
+          <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
+            Whether you're starting on a budget or ready to scale fast — we've got the perfect bundle for your journey.
+          </p>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {bundles.map((bundle, index) => (
-            <Card key={index} className="rounded-2xl shadow-md">
-              <div className={`${bundle.color} rounded-t-2xl p-4 text-white text-lg font-semibold`}>{bundle.title}</div>
-              <CardContent className="p-6 space-y-4">
-                <p className="text-cyan-600 text-sm">Starting at</p>
-                <h2 className="text-3xl font-bold text-gray-800">{bundle.price}</h2>
-                <div className="bg-gray-100 p-4 rounded-md text-left">
-                  <p className="font-medium text-gray-700">{bundle.subtitle}</p>
-                  <p className="text-gray-600 text-sm mt-1">{bundle.description}</p>
+            <Card
+              key={bundle.id}
+              className="relative overflow-hidden rounded-2xl shadow-md transition-transform hover:scale-[1.01]"
+            >
+              {/* Header */}
+              <div className={`absolute top-0 left-0 w-full ${bundle.bgColor} text-white text-center py-4 z-10`}>
+                <h3 className="text-lg sm:text-xl font-semibold tracking-wide">{bundle.name}</h3>
+              </div>
+
+              <CardContent className={`mt-5 pt-20 ${index === 1 ? "p-6 sm:p-8 pb-12" : "p-4 sm:p-6"}`}>
+                {/* Price Row */}
+                <div className="mb-4 flex justify-between items-center">
+                  <p className={`${bundle.textColor} text-sm sm:text-md mb-1`}>Starting at</p>
+                  <p className={`font-bold ${bundle.textColor} ${index === 1 ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>
+                    {bundle.price}
+                  </p>
                 </div>
-                <div className="text-left">
-                  <h3 className="font-semibold text-gray-800">Inclusions:</h3>
-                  <ul className="mt-2 space-y-1 text-sm text-gray-700 list-disc list-inside">
-                    {bundle.inclusions.map((item, i) => (
-                      <li key={i}>{item}</li>
+
+                {/* Target & Description */}
+                <div className="mb-4 bg-gray-50 rounded-lg p-3">
+                  <p className="text-purple-600 font-medium text-sm mb-2">{bundle.target}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{bundle.description}</p>
+                </div>
+
+                {/* Inclusions */}
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Inclusions:</h4>
+                  <ul className="space-y-2">
+                    {bundle.inclusions.map((inclusion, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <div className="bg-teal-500 rounded-full p-1 mt-0.5 flex-shrink-0">
+                          <Check className="w-3 h-3 text-white" />
+                        </div>
+                        <span className="text-gray-700 text-sm leading-relaxed">{inclusion}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
-                <Button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-full">
-                  Try this Bundle
-                </Button>
+
+                {/* Button */}
+                <div>
+                  <Button
+                    className={`w-full ${bundle.buttonColor} text-white rounded-full font-medium transition-colors ${index === 1 ? "py-4 text-base sm:text-lg" : "py-3 text-sm sm:text-base"
+                      }`}
+                  >
+                    Try this Bundle
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-    </section>
-  );
+    </div>
+  )
 }

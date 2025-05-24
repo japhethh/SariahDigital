@@ -1,3 +1,5 @@
+"use client"
+
 import { Marquee } from "./magicui/marquee";
 
 const credentials = [

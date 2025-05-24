@@ -10,6 +10,7 @@ import WhyChoose from '@/components/WhyChoose'
 import DigitalJourney from '@/components/about_us/DigitalJourney'
 import WebinarSection from '@/components/WebinarSection'
 import EbookBundles from '@/components/EbookBundles'
+import PaymentSection from '@/components/PaymentSection'
 // import HeroWithHeader from '@/components/Hero'
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
         <Testimonials />
         <WebinarSection />
         <EbookBundles />
+        <PaymentSection />
         <FAQ />
       </main>
     </div >
