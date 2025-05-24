@@ -12,6 +12,7 @@ import WebinarSection from '@/components/WebinarSection'
 import EbookBundles from '@/components/EbookBundles'
 // import PaymentSection from '@/components/PaymentSection'
 import PaymentSectionv1 from '@/components/PaymentSectionv1'
+import GetInTouch from '@/components/GetInTouch'
 // import HeroWithHeader from '@/components/Hero'
 const page = () => {
   return (
@@ -29,6 +30,7 @@ const page = () => {
         <EbookBundles />
         <PaymentSectionv1 />
         <FAQ />
+        <GetInTouch />
       </main>
     </div >
   )

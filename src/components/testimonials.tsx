@@ -151,13 +151,16 @@ export default function Testimonials() {
   return (
     <Element name="testimonials" className="py-16">
       <div className="">
-        <div className="text-center mb-8 max-w-120 mx-auto">
-          <h2 className="text-5xl font-bold mb-3 text-[#243B2D]">What My Client say.</h2>
-          <p className="text-black  text-sm">
-            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
-            industry is standard dummy text ever since the 1500s
+        {/* Section Header */}
+        <div className="text-center mb-8 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#243B2D] mb-2">
+            What My Client Say.
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base">
+            Lorem ipsum is simply dummy text of the printing and typesetting industry. It has been the standard dummy text since the 1500s.
           </p>
         </div>
+
 
         <div className="relative">
           <div className="flex justify-end gap-2 mb-6">

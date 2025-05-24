@@ -67,12 +67,12 @@ export default function Component() {
             Direct & Benefit-Focused
           </h1>
           <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto">
-            Whether you're starting on a budget or ready to scale fast — we've got the perfect bundle for your journey.
+            Whether you&apos;re starting on a budget or ready to scale fast — we&apos;ve got the perfect bundle for your journey.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
           {bundles.map((bundle, index) => (
             <Card
               key={bundle.id}
@@ -83,18 +83,18 @@ export default function Component() {
                 <h3 className="text-lg sm:text-xl font-semibold tracking-wide">{bundle.name}</h3>
               </div>
 
-              <CardContent className={`mt-5 pt-20 ${index === 1 ? "p-6 sm:p-8 pb-12" : "p-4 sm:p-6"}`}>
+              <CardContent className={`mt-5 pt-20 ${index === 1 ? "p-6 sm:p-8 pb-12" : "p-6 mt-7 sm:p-6"}`}>
                 {/* Price Row */}
                 <div className="mb-4 flex justify-between items-center">
                   <p className={`${bundle.textColor} text-sm sm:text-md mb-1`}>Starting at</p>
-                  <p className={`font-bold ${bundle.textColor} ${index === 1 ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>
+                  <p className={`font-bold ${bundle.textColor} ${index === 1 ? "text-3xl " : "text-2xl sm:text-2xl"}`}>
                     {bundle.price}
                   </p>
                 </div>
 
                 {/* Target & Description */}
                 <div className="mb-4 bg-gray-50 rounded-lg p-3">
-                  <p className="text-purple-600 font-medium text-sm mb-2">{bundle.target}</p>
+                  <p className={`${bundle.textColor} text-purple-600 font-medium text-sm mb-2`}>{bundle.target}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{bundle.description}</p>
                 </div>
 
@@ -116,7 +116,7 @@ export default function Component() {
                 {/* Button */}
                 <div>
                   <Button
-                    className={`w-full ${bundle.buttonColor} text-white rounded-full font-medium transition-colors ${index === 1 ? "py-4 text-base sm:text-lg" : "py-3 text-sm sm:text-base"
+                    className={`w-full ${bundle.buttonColor} text-white rounded-full translate-y-5 font-medium transition-colors ${index === 1 ? "py-4 text-base sm:text-lg" : "py-3 text-sm sm:text-base"
                       }`}
                   >
                     Try this Bundle
