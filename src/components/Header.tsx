@@ -1,7 +1,6 @@
 "use client"
-import { X } from "lucide-react"
 import Image from "next/image"
-import Link from 'next/link'
+import { PersonalInfoDialog } from "./personal-info-dialog"
 
 
 const Header = () => {
@@ -21,12 +20,8 @@ const Header = () => {
                 className="w-full h-auto"
               />
             </div>
-            <div>
-              <Link href="/getstarted" className="cursor-pointer py-2 px-6 bg-[#243B2D] rounded-full text-white">Get Started</Link>
-
-              <div className="md:hidden">
-                <X />
-              </div>
+            <div className="flex items-center gap-4">
+              <PersonalInfoDialog />
             </div>
           </div>
         </div>
