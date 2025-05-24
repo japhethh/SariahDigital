@@ -1,95 +1,101 @@
-import { Check } from "lucide-react"
+import { ArrowDownRight } from "lucide-react"
+import Image from "next/image"
+import { Button } from "./ui/button"
+
+const pathSystemData = {
+  createEbook: {
+    title: "Create your own eBook",
+    inclusions: [
+      "Learn to write, design, and sell from scratch",
+      "Ideal for creatives, freelancers, coaches",
+      "Long-term brand building",
+    ],
+  },
+  resellBundles: {
+    title: "Resell DFY Digital Bundles",
+    inclusions: [
+      "Sell ready-made eBooks like the Digibook Kit, Premium Luxe, and All-In Bundle",
+      "Ideal for working students, working professionals, OFWs",
+      "Faster launch with zero product creation",
+    ],
+  },
+}
+
+const PathCard = ({
+  title,
+  inclusions,
+  className,
+}: {
+  title: string
+  inclusions: string[]
+  className?: string
+}) => (
+  <div
+    className={`border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between ${className || ""}`}
+  >
+    <div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-1">{title}</h3>
+      <p className="text-gray-500 text-sm mb-4">Inclusions:</p>
+      <div className="flex flex-col gap-3 text-sm font-medium">
+        {inclusions.map((inclusion, index) => (
+          <div key={index} className="flex gap-2 items-start">
+            <ArrowDownRight className="h-4 w-4 text-gray-700 mt-1" />
+            <span className="text-gray-800 leading-snug">{inclusion}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="pt-6 text-right">
+      <Button
+        variant="outline"
+        className="rounded-full bg-white py-2 px-6 border-gray-800 text-gray-800 font-medium hover:bg-gray-50 transition-colors duration-200 text-sm"
+      >
+        Inquire Now
+      </Button>
+    </div>
+  </div>
+)
 
 const Inquire = () => {
   return (
-    <div className="py-16 bg-gray-50 ">
-      <div className=" max-w-7xl  mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3">2-PATH SYSTEM</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+    <section className="min-h-screen flex items-center">
+      <div className=" w-full">
+        {/* Header */}
+        <header className="mb-10 text-center lg:text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">2-PATH SYSTEM</h2>
+          <p className="text-lg text-gray-600 mt-2">
             Build a business, get coached 1:1, and resell proven digital assets.
           </p>
-        </div>
+        </header>
 
-        <div className="flex flex-col md:flex-row md:justify-between md:gap-8 items-stretch">
-          {/* Left Card */}
-          <div className="w-full md:w-2/5 bg-[#243B2D] text-white rounded-lg overflow-hidden shadow-lg mb-8 md:mb-0">
-            <div className="p-5 flex flex-col h-full">
-              <h3 className="text-2xl font-semibold mb-5">Create your own eBook</h3>
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr_1.8fr] gap-6 items-stretch">
+          {/* Left Path */}
+          <PathCard
+            title={pathSystemData.createEbook.title}
+            inclusions={pathSystemData.createEbook.inclusions}
+          />
 
-              <div className="mb-5">
-                <p className="text-gray-300 mb-4">Inclusions:</p>
-                <ul className="space-y-4 text-white">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-700 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span>Learn to write, design, and sell from scratch</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-700 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span>Ideal for creatives, freelancers, coaches</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-700 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span>Long-term brand building</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-auto text-right">
-                <button className="inline-block bg-white text-[#243B2D] px-[24px] py-2 rounded-full font-medium hover:bg-gray-100 transition-colors">
-                  Inquire Now
-                </button>
-              </div>
-            </div>
+          {/* Image */}
+          <div className="relative aspect-[3/4] lg:aspect-auto w-full max-h-[500px] rounded-xl overflow-hidden border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
+            <Image
+              src="/inquireImage.png"
+              alt="Professional woman with laptop - Digital business coaching"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
           </div>
 
-          {/* Right Card */}
-          <div className="w-full md:w-3/5 bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200">
-            <div className="p-5 flex flex-col h-full">
-              <h3 className="text-2xl font-semibold mb-5 text-gray-800">Resell DFY Digital Bundles</h3>
-
-              <div className="mb-5">
-                <p className="text-gray-500 mb-4">Inclusions:</p>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span className="text-gray-700">
-                      Sell ready-made eBooks like the Digibook Kit, Premium Luxe, and All-In Bundle
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span className="text-gray-700">Ideal for working students, working professionals, OFWs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-800 flex items-center justify-center mr-3">
-                      <Check size={16} />
-                    </div>
-                    <span className="text-gray-700">Faster launch with zero product creation</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mt-auto text-right">
-                <button className="inline-block bg-[#243B2D] text-white px-[24px] py-2 rounded-full font-medium hover:bg-green-800 transition-colors">
-                  Inquire Now
-                </button>
-              </div>
-            </div>
-          </div>
+          {/* Right Path */}
+          <PathCard
+            title={pathSystemData.resellBundles.title}
+            inclusions={pathSystemData.resellBundles.inclusions}
+          />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

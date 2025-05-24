@@ -7,7 +7,7 @@ import {
 
 const FAQ = () => {
   return (
-    <div className="bg-gray-50 py-16 px-4">
+    <div className="py-16 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#243B2D]">Frequently Asked Question</h2>

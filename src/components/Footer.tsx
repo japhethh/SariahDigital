@@ -3,9 +3,9 @@ import Image from "next/image"
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex md:flex-row flex-col  justify-between items-start">
+    <footer className="bg-white ">
+      <div className="py-12 max-w-7xl px-4 mx-auto">
+        <div className="flex md:flex-row flex-col gap-3 md:justify-between md:items-start">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/">
@@ -13,7 +13,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex md:flex-row flex-col  md:gap-[73px]">
+          <div className=" flex flex-row max-md:grid max-md:grid-cols-2 md:grid-cols-3 max-md:gap-4 md:gap-[73px]">
 
             {/* Quick Links */}
             <div>

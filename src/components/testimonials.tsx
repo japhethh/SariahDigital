@@ -62,17 +62,7 @@ export default function Testimonials() {
       chatSnippet: "Have a great working week!!",
       time: "10:25 AM",
     },
-    {
-      id: 4,
-      name: "Mia Taylor",
-      email: "MiaTaylor@gmail.com",
-      image: "/blonde-woman-portrait.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry standard dummy text ever since the 1500s",
-      chatSnippet: "Have a great working week!!",
-      time: "09:55 AM",
-    },
+
     {
       id: 5,
       name: "Sophie Johnson",
@@ -84,17 +74,7 @@ export default function Testimonials() {
       chatSnippet: "Thanks for the amazing service!",
       time: "11:15 AM",
     },
-    {
-      id: 6,
-      name: "Emma Wilson",
-      email: "EmmaWilson@gmail.com",
-      image: "/woman-black-hair.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "Working with this company has been a game-changer for my business. Their innovative solutions have helped us grow exponentially.",
-      chatSnippet: "Looking forward to our next project!",
-      time: "01:45 PM",
-    },
+
     {
       id: 7,
       name: "Olivia Brown",
@@ -106,17 +86,7 @@ export default function Testimonials() {
       chatSnippet: "The results are fantastic!",
       time: "02:30 PM",
     },
-    {
-      id: 8,
-      name: "Isabella Davis",
-      email: "IsabellaDavis@gmail.com",
-      image: "/blonde-woman-portrait.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "Their customer service is unparalleled. They were always available to answer questions and address concerns promptly.",
-      chatSnippet: "Exceptional support team!",
-      time: "03:10 PM",
-    },
+
     {
       id: 9,
       name: "Michael Johnson",
@@ -128,17 +98,7 @@ export default function Testimonials() {
       chatSnippet: "Truly impressed with the quality!",
       time: "10:05 AM",
     },
-    {
-      id: 10,
-      name: "Daniel Williams",
-      email: "DanielWilliams@gmail.com",
-      image: "/woman-black-hair.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "Their innovative approach to problem-solving helped us overcome challenges we do been struggling with for months.",
-      chatSnippet: "Game-changing solutions!",
-      time: "11:45 AM",
-    },
+
     {
       id: 11,
       name: "Sophia Martinez",
@@ -150,17 +110,7 @@ export default function Testimonials() {
       chatSnippet: "Great communication!",
       time: "01:20 PM",
     },
-    {
-      id: 12,
-      name: "Ethan Anderson",
-      email: "EthanAnderson@gmail.com",
-      image: "/blonde-woman-portrait.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "The team is expertise in their field is evident. They provided valuable insights that helped shape our strategy.",
-      chatSnippet: "Expert advice that made a difference!",
-      time: "02:15 PM",
-    },
+
     {
       id: 13,
       name: "Amelia Thomas",
@@ -173,17 +123,6 @@ export default function Testimonials() {
       time: "09:40 AM",
     },
     {
-      id: 14,
-      name: "Benjamin Jackson",
-      email: "BenjaminJackson@gmail.com",
-      image: "/woman-black-hair.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "The level of customization they offered was exactly what we needed. The solution feels tailor-made for our business.",
-      chatSnippet: "Perfect fit for our needs!",
-      time: "10:50 AM",
-    },
-    {
       id: 15,
       name: "Charlotte White",
       email: "CharlotteWhite@gmail.com",
@@ -193,17 +132,7 @@ export default function Testimonials() {
       chatSnippet: "Great value for money!",
       time: "12:35 PM",
     },
-    {
-      id: 16,
-      name: "Henry Harris",
-      email: "HenryHarris@gmail.com",
-      image: "/blonde-woman-portrait.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "The ongoing support after implementation has been exceptional. They truly care about long-term client satisfaction.",
-      chatSnippet: "Excellent ongoing support!",
-      time: "03:25 PM",
-    },
+
     {
       id: 17,
       name: "Lily Clark",
@@ -215,46 +144,16 @@ export default function Testimonials() {
       chatSnippet: "Creative solutions that work!",
       time: "09:15 AM",
     },
-    {
-      id: 18,
-      name: "Alexander Lewis",
-      email: "AlexanderLewis@gmail.com",
-      image: "/woman-black-hair.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "The training they provided ensured our team could maximize the benefits of their solution. Very thorough.",
-      chatSnippet: "Comprehensive training!",
-      time: "11:05 AM",
-    },
-    {
-      id: 19,
-      name: "Grace Walker",
-      email: "GraceWalker@gmail.com",
-      image: "/red-haired-woman.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial: "Their attention to security and data protection gave us peace of mind throughout the project.",
-      chatSnippet: "Security-focused approach!",
-      time: "01:55 PM",
-    },
-    {
-      id: 20,
-      name: "William Turner",
-      email: "WilliamTurner@gmail.com",
-      image: "/blonde-woman-portrait.png",
-      commentsImage: "/testimonialImage1.png",
-      testimonial:
-        "The scalability of their solution has allowed us to grow without worrying about outgrowing our systems.",
-      chatSnippet: "Scalable and future-proof!",
-      time: "04:10 PM",
-    },
+
+
   ]
 
   return (
-    <Element name="testimonials" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-3 text-[#243B2D]">Testimonials</h2>
-          <p className="text-black max-w-2xl mx-auto">
+    <Element name="testimonials" className="py-16">
+      <div className="">
+        <div className="text-center mb-8 max-w-120 mx-auto">
+          <h2 className="text-5xl font-bold mb-3 text-[#243B2D]">What My Client say.</h2>
+          <p className="text-black  text-sm">
             Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the
             industry is standard dummy text ever since the 1500s
           </p>
@@ -309,7 +208,7 @@ export default function Testimonials() {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
+                <div className="bg-white  rounded-lg border overflow-hidden h-full my-2">
                   <div className="p-[24px] flex flex-col h-full">
                     <div className="flex flex-col">
                       <div className="flex flex-row items-center mb-2">

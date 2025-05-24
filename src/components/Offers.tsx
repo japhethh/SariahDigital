@@ -26,7 +26,7 @@ const Offers = () => {
   }
 
   return (
-    <div className="min-h-auto max-w-7xl mx-auto px-4 lg:px-8 py-6 md:py-10">
+    <div className="min-h-auto lg:px-8 py-6 md:py-10">
       <div className="text-black max-w-md font-medium mb-8">
         Get the exact strategies that helped me earn my first ₱50,000 as a beginner — no fluff, just results.
       </div>
@@ -37,7 +37,7 @@ const Offers = () => {
           <tbody>
             {/* First Row - Webinars */}
             <motion.tr
-              className="border-b border-gray-200"
+              className=" border-gray-200"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -46,7 +46,7 @@ const Offers = () => {
               <td className="py-8 pr-8 w-1/2">
                 <motion.div variants={imageAnimation}>
                   <Image
-                    src="/1image.png"
+                    src="/offersImage1.png"
                     width={200}
                     height={0}
                     className="w-full rounded-lg shadow-sm"
@@ -71,7 +71,7 @@ const Offers = () => {
 
             {/* Second Row - eBook Bundles */}
             <motion.tr
-              className="border-b border-gray-200"
+              className=" border-gray-200 rounded-md"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -95,7 +95,7 @@ const Offers = () => {
               <td className="py-8 pl-8 w-1/2">
                 <motion.div variants={imageAnimation}>
                   <Image
-                    src="/1image.png"
+                    src="/offersImage2.png"
                     width={200}
                     height={0}
                     className="w-full rounded-lg shadow-sm"
@@ -107,7 +107,7 @@ const Offers = () => {
 
             {/* Third Row - Reselling */}
             <motion.tr
-              className="border-b border-gray-200"
+              className=" border-gray-200 rounded-md"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -116,7 +116,7 @@ const Offers = () => {
               <td className="py-8 pr-8 w-1/2">
                 <motion.div variants={imageAnimation}>
                   <Image
-                    src="/1image.png"
+                    src="/offersImage3.png"
                     width={200}
                     height={0}
                     className="w-full rounded-lg shadow-sm"
@@ -148,7 +148,7 @@ const Offers = () => {
         <div className="space-y-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={imageAnimation}>
             <Image
-              src="/1image.png"
+              src="/offersImage3.png"
               width={200}
               height={0}
               className="w-full rounded-lg shadow-sm"
